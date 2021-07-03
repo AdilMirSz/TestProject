@@ -21,16 +21,13 @@ namespace CSVWorker
 
             for (int i = 0; i < _linesCount; i++)
             {
-                var dayAndStartTime = data[CSVTypes[0]][i].Split(' ');
-                var dayAndEndTime = data[CSVTypes[1]][i].Split(' ');
+                var dayAndStartTime = data[CSVTypes.SessionStartTime][i].Split(' ');
+                var dayAndEndTime = data[CSVTypes.SessionEndTime][i].Split(' ');
 
                 var dateTime = Convert.ToDateTime(dayAndStartTime[0]);
                 if (!timespansByDays.ContainsKey(dateTime))
                 {
                     timespansByDays[dateTime] = new SessionsRanges { StartTimes = new List<int>(), EndTimes = new List<int>() };
-
-                    timespansByDays[dateTime].StartTimes.Add((int)TimeSpan.Parse(dayAndStartTime[1]).TotalSeconds);
-                    timespansByDays[dateTime].EndTimes.Add((int)TimeSpan.Parse(dayAndEndTime[1]).TotalSeconds);
                 }
 
                 timespansByDays[dateTime].StartTimes.Add((int)TimeSpan.Parse(dayAndStartTime[1]).TotalSeconds);

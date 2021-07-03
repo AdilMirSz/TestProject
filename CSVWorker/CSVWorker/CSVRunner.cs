@@ -19,7 +19,7 @@ namespace CSVWorker
 
             while (!finished)
             {
-                Console.WriteLine("enter 1 to generate peak active sessions report;" + "\n" + 
+                Console.WriteLine("enter 1 to generate max concurrent active sessions report;" + "\n" + 
                                   "enter 2 to generate total operators' session durations;" + "\n" +
                                   "type anything else to close program");
 

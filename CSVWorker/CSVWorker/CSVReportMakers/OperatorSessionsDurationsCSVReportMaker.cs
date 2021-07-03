@@ -13,21 +13,19 @@ namespace CSVWorker
 
             for (int i = 0; i < _linesCount; i++)
             {
-                var operatorName = data[CSVTypes[3]][i];
-                var sessionState = data[CSVTypes[4]][i];
-                var stateDuration = data[CSVTypes[5]][i];
+                var operatorName = data[CSVTypes.OperatorName][i];
+                var sessionState = data[CSVTypes.SessionState][i];
+                var stateDuration = data[CSVTypes.SessionStateDuration][i];
 
                 if (!operatorsStatesDict.ContainsKey(operatorName))
                 {
                     operatorsStatesDict[operatorName] = new Dictionary<string, long>();
-                    if (!operatorsStatesDict[operatorName].ContainsKey(sessionState))
-                        operatorsStatesDict[operatorName][sessionState] = long.Parse(stateDuration);
-
-                    operatorsStatesDict[operatorName][sessionState] += long.Parse(stateDuration);
                 }
 
                 if (!operatorsStatesDict[operatorName].ContainsKey(sessionState))
+                {
                     operatorsStatesDict[operatorName][sessionState] = long.Parse(stateDuration);
+                }
 
                 operatorsStatesDict[operatorName][sessionState] += long.Parse(stateDuration);
             }
@@ -37,7 +35,7 @@ namespace CSVWorker
                 Console.Write("For operator " + "<"+dict.Key+">");
                 foreach (var kvp in dict.Value)
                 {
-                    Console.Write(" State " + "<"+kvp.Key+">" + " lasted for " + (kvp.Value / 60 + kvp.Value %60) + " minutes; ");
+                    Console.Write(" State " + "<"+kvp.Key+">" + " lasted for " + (kvp.Value / 60 + kvp.Value % 60) + " minutes; ");
                     Console.WriteLine();
                 }
             }
