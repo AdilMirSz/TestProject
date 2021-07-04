@@ -17,7 +17,7 @@ namespace CSVWorker
 
             bool finished = false;
 
-            while (!finished)
+            while (true)
             {
                 Console.WriteLine("enter 1 to generate max concurrent active sessions report;" + "\n" + 
                                   "enter 2 to generate total operators' session durations;" + "\n" +
