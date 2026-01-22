@@ -12,15 +12,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a91279c-f748-4d46-84d8-1a6cccd66f67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TestProject.CurrencyUpdater/Cbr/CbrCurrencyRate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.CurrencyUpdater/Cbr/CbrOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.CurrencyUpdater/Cbr/CbrXmlParser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.CurrencyUpdater/Cbr/CurrencyUpdaterOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.CurrencyUpdater/Persistence/CurrencyUpsertRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.CurrencyUpdater/Workers/CurrencyRatesWorker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.CurrencyUpdater/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Abstractions/IJwtTokenGenerator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Abstractions/IPasswordHasher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Abstractions/IUserRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Auth/Login/LoginCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Auth/Login/LoginHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Auth/Register/RegisterUserCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Auth/Register/RegisterUserHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Infrastructure/Persistence/EfUserRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Infrastructure/Security/AspNetPasswordHasher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Infrastructure/Security/JwtTokenGenerator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.WebApi/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject.UserService.Application/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject.UserService.Domain/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject.UserService.Infrastructure/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject.UserService.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.UserService.WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject.UserService.WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.UserService.WebApi/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +62,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.TestProject.UserService.WebApi: http.executor": "Run",
+    ".NET Launch Settings Profile.TestProject.UserService.WebApi: https.executor": "Run",
     ".NET Project.TestProject.CurrencyUpdater.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -72,7 +82,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project.TestProject.CurrencyUpdater">
+  <component name="RunManager" selected=".NET Launch Settings Profile.TestProject.UserService.WebApi: http">
     <configuration name="TestProject.CurrencyUpdater" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -163,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769066681299</updated>
-      <workItem from="1769066685150" duration="12339000" />
+      <workItem from="1769066685150" duration="14674000" />
     </task>
     <servers />
   </component>
