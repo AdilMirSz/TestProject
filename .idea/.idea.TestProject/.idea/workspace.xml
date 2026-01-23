@@ -12,23 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a91279c-f748-4d46-84d8-1a6cccd66f67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Abstractions/IJwtTokenGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Abstractions/IPasswordHasher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Abstractions/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Auth/Login/LoginCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Auth/Login/LoginHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Auth/Register/RegisterUserCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Auth/Register/RegisterUserHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Infrastructure/Persistence/EfUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Infrastructure/Security/AspNetPasswordHasher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Infrastructure/Security/JwtTokenGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.UserService.WebApi/Controllers/UserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Currency/AddCurrencyToFavoritesCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Currency/AddCurrencyToFavoritesHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Currency/FavoriteCurrencyDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Currency/GetMyFavoritesHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Currency/GetMyFavoritesQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Currency/RemoveCurrencyFromFavoritesCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestProject.UserService.Application/Currency/RemoveCurrencyFromFavoritesHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject.UserService.Application/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject.UserService.Domain/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject.UserService.Infrastructure/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject.UserService.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.UserService.WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject.UserService.WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.UserService.WebApi/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject.UserService.Application/TestProject.UserService.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.UserService.Application/TestProject.UserService.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject.UserService.Domain/TestProject.UserService.Domain.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject.UserService.WebApi/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.UserService.WebApi/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestProject.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +43,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="38bSGItzOi1VX0OKS6GqyODQcWj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -60,28 +55,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.TestProject.UserService.WebApi: http.executor": "Run",
-    ".NET Launch Settings Profile.TestProject.UserService.WebApi: https.executor": "Run",
-    ".NET Project.TestProject.CurrencyUpdater.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.TestProject.UserService.WebApi: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.TestProject.UserService.WebApi: https.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.TestProject.CurrencyUpdater.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\adilm\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\adilm\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\adilm\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\adilm\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\adilm\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\adilm\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.TestProject.UserService.WebApi: http">
     <configuration name="TestProject.CurrencyUpdater" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -174,6 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769066681299</updated>
       <workItem from="1769066685150" duration="14674000" />
+      <workItem from="1769149507212" duration="7720000" />
     </task>
     <servers />
   </component>
