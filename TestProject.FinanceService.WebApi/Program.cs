@@ -1,14 +1,12 @@
 using System.Text;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using TestProject.Shared.Auth;
 using TestProject.Shared.Persistence;
-using TestProject.UserService.Application.Abstractions;
-using TestProject.UserService.Infrastructure.Persistence;
-using TestProject.UserService.Infrastructure.Security;
 
-namespace TestProject.UserService.WebApi;
+namespace TestProject.FinanceService.WebApi;
 
 public static class Program
 {
@@ -16,14 +14,11 @@ public static class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Controllers
         builder.Services.AddControllers();
 
-        // MediatR (сканируем Application сборку)
         builder.Services.AddMediatR(cfg =>
-            cfg.RegisterServicesFromAssembly(typeof(UserService.Application.Auth.Login.LoginCommand).Assembly));
+            cfg.RegisterServicesFromAssembly(typeof(TestProject.FinanceService.Application.Rates.GetMyRatesQuery).Assembly));
 
-        // DB
         var cs = builder.Configuration.GetConnectionString("Postgres")
                  ?? builder.Configuration["POSTGRES_CONNECTION"];
 
@@ -31,16 +26,7 @@ public static class Program
             throw new InvalidOperationException("Connection string not found.");
 
         builder.Services.AddDbContext<AppDbContext>(o => o.UseNpgsql(cs));
-
-        // Options
-        builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt"));
-
-        // Infrastructure services
-        builder.Services.AddScoped<IUserRepository, EfUserRepository>();
-        builder.Services.AddSingleton<IPasswordHasher, AspNetPasswordHasher>();
-        builder.Services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
-
-        // Auth (JWT Bearer)
+        
         var jwt = builder.Configuration.GetSection("Jwt").Get<JwtOptions>()!;
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.Key));
 

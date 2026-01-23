@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using TestProject.Shared.Auth;
 using TestProject.UserService.Application.Abstractions;
 
 namespace TestProject.UserService.Infrastructure.Security;
@@ -35,10 +36,3 @@ public sealed class JwtTokenGenerator : IJwtTokenGenerator
     }
 }
 
-public sealed class JwtOptions
-{
-    public string Issuer { get; set; } = "TestProject";
-    public string Audience { get; set; } = "TestProject";
-    public string Key { get; set; } = null!;
-    public int AccessTokenMinutes { get; set; } = 60;
-}
