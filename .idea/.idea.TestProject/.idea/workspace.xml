@@ -18,11 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a91279c-f748-4d46-84d8-1a6cccd66f67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/FinanceServiceTests/GetMyRatesQueryHandlerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FinanceServiceTests/GetMyRatesQueryHandlerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/IntegrationTests/UserControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/IntegrationTests/UserControllerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UserServiceTests/LoginHandlerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UserServiceTests/LoginHandlerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/IntegrationTests/UserControllerTests.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +302,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769066681299</updated>
       <workItem from="1769066685150" duration="14674000" />
-      <workItem from="1769149507212" duration="20114000" />
+      <workItem from="1769149507212" duration="20288000" />
     </task>
     <servers />
   </component>
