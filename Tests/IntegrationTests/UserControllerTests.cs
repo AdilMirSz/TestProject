@@ -1,28 +1,35 @@
-﻿using System.Net.Http.Json;
+﻿using System.Net.Http;
+using System.Net.Http.Json;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Testing;
 using TestProject.UserService.Application.Auth.Register;
+using Xunit;
 
-namespace Tests.IntegrationTests;
-
-public class UserControllerTests : IClassFixture<WebApplicationFactory<TestProject.UserService.WebApi.Startup>>
+namespace Tests.IntegrationTests
 {
-    private readonly HttpClient _client;
-
-    public UserControllerTests(WebApplicationFactory<TestProject.UserService.WebApi.Startup> factory)
+    public class UserControllerTests : IClassFixture<WebApplicationFactory<TestProject.UserService.WebApi.Program>>
     {
-        _client = factory.CreateClient();
-    }
+        private readonly HttpClient _client;
 
-    [Fact]
-    public async Task Register_ReturnsCreatedAtAction()
-    {
-        var registerUser = new RegisterUserCommand { Name = "alice", Password = "secret" };
+        public UserControllerTests(WebApplicationFactory<TestProject.UserService.WebApi.Program> factory)
+        {
+            _client = factory.CreateClient();
+        }
 
-        var response = await _client.PostAsJsonAsync("/api/user/register", registerUser);
 
-        response.EnsureSuccessStatusCode();
+        [Fact]
+        public async Task Register_ReturnsCreatedAtAction()
+        {
+            // Arrange
+            var registerUser = new RegisterUserCommand("alice", "secret");
 
-        var responseContent = await response.Content.ReadAsStringAsync();
-        Assert.Contains("userId", responseContent);
+            // Act
+            var response = await _client.PostAsJsonAsync("/api/user/register", registerUser);
+
+            // Assert
+            response.EnsureSuccessStatusCode(); // Убедитесь, что статус 201 Created
+            var responseContent = await response.Content.ReadAsStringAsync();
+            Assert.Contains("userId", responseContent); // Проверяем, что userId есть в ответе
+        }
     }
 }

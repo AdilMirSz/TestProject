@@ -1,35 +1,43 @@
-using Moq;
-using TestProject.Shared.Persistence.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using TestProject.FinanceService.Application.Rates;
+using TestProject.Shared.Persistence;
 using TestProject.UserService.Application.Abstractions;
-using TestProject.UserService.Application.Auth.Login;
+using TestProject.UserService.Infrastructure.Persistence;
 
 namespace Tests.UserServiceTests;
 
-public class LoginHandlerTests
+public class UserFinanceIntegrationTests
 {
+    private readonly IServiceProvider _serviceProvider;
+
+    public UserFinanceIntegrationTests()
+    {
+        // Setup in-memory database or actual database connection here
+        var serviceCollection = new ServiceCollection();
+        serviceCollection.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("TestDb"));
+        serviceCollection.AddTransient<IUserRepository, EfUserRepository>();
+        serviceCollection.AddTransient<GetMyRatesHandler>();
+
+        _serviceProvider = serviceCollection.BuildServiceProvider();
+    }
+
     [Fact]
-    public async Task Handle_ValidLogin_ReturnsToken()
+    public async Task UserShouldGetFavoriteCurrencyRates()
     {
         // Arrange
-        var mockUserRepo = new Mock<IUserRepository>();
-        var mockJwtGenerator = new Mock<IJwtTokenGenerator>();
-        var mockHasher = new Mock<IPasswordHasher>();
+        var userRepository = _serviceProvider.GetRequiredService<IUserRepository>();
+        var financeHandler = _serviceProvider.GetRequiredService<GetMyRatesHandler>();
 
-        var user = new UserRow { Id = 1, Name = "alice", PasswordHash = "hashedpassword" };
-        mockUserRepo.Setup(repo => repo.GetByNameAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(user);
-        mockHasher.Setup(hasher => hasher.Verify(It.IsAny<string>(), It.IsAny<string>())).Returns(true);
-        mockJwtGenerator.Setup(generator => generator.GenerateAccessToken(It.IsAny<long>(), It.IsAny<string>()))
-            .Returns("generated-jwt-token");
+        // Create user
+        var userId = await userRepository.CreateAsync("testuser", "hashedPassword", default);
 
-        var handler = new LoginHandler(mockUserRepo.Object, mockHasher.Object, mockJwtGenerator.Object);
-        
-        var command = new LoginCommand { Name = "alice", Password = "secret" };
-
-        // Act
-        var result = await handler.Handle(command, CancellationToken.None);
+        // Simulate adding user favorites and fetching rates
+        var query = new GetMyRatesQuery(userId);
+        var result = await financeHandler.Handle(query, default);
 
         // Assert
-        Assert.Equal("generated-jwt-token", result.Token);
+        Assert.NotEmpty(result);
+        Assert.Equal("USD", result[0].Name);
     }
 }

@@ -18,18 +18,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a91279c-f748-4d46-84d8-1a6cccd66f67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TestProject.ApiGateway/ocelot.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.FinanceService.Application/Rates/CurrencyRateDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.FinanceService.Application/Rates/GetMyRatesHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.FinanceService.Application/Rates/GetMyRatesQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.FinanceService.WebApi/Controllers/FinanceController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestProject.Shared/Auth/JwtOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/FinanceServiceTests/GetMyRatesQueryHandlerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/IntegrationTests/UserControllerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject.UserService.Infrastructure/Security/JwtTokenGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.UserService.Infrastructure/Security/JwtTokenGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject.UserService.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.UserService.WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProject.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TestProject.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FinanceServiceTests/GetMyRatesQueryHandlerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FinanceServiceTests/GetMyRatesQueryHandlerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/IntegrationTests/UserControllerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/IntegrationTests/UserControllerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UserServiceTests/LoginHandlerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UserServiceTests/LoginHandlerTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +306,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769066681299</updated>
       <workItem from="1769066685150" duration="14674000" />
-      <workItem from="1769149507212" duration="15983000" />
+      <workItem from="1769149507212" duration="20114000" />
     </task>
     <servers />
   </component>
